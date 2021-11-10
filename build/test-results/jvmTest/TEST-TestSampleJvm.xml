@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestSampleJvm" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-10T15:10:20" hostname="DIESERPC" time="0.025">
+  <properties/>
+  <testcase name="runFibTest[jvm]" classname="TestSampleJvm" time="0.025"/>
+  <system-out><![CDATA[Fibonacci Sequence
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+89
+144
+233
+377
+610
+987
+1597
+2584
+4181
+6765
+10946
+17711
+28657
+46368
+75025
+121393
+196418
+317811
+514229
+result: kotlin.Unit
+Duration ist 18 ms
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

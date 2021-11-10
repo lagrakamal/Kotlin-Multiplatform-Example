@@ -1,0 +1,10 @@
+{
+  "name": "try",
+  "version": "1.0.0-SNAPSHOT",
+  "main": "kotlin/try.js",
+  "devDependencies": {},
+  "dependencies": {},
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "bundledDependencies": []
+}

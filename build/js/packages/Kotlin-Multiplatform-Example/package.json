@@ -1,0 +1,10 @@
+{
+  "name": "Kotlin-Multiplatform-Example",
+  "version": "1.0.0-SNAPSHOT",
+  "main": "kotlin/Kotlin-Multiplatform-Example.js",
+  "devDependencies": {},
+  "dependencies": {},
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "bundledDependencies": []
+}

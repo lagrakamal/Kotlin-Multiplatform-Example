@@ -1,0 +1,20 @@
+{
+  "version": "9",
+  "items": {
+    "5b337cc3610dde3ec3719bda35d999e0": {
+      "src": "C:\\Users\\user\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin\\kotlin-stdlib-common\\1.5.31\\43331609c7de811fed085e0dfd150874b157c32\\kotlin-stdlib-common-1.5.31.jar"
+    },
+    "7e46137bd84cd3d52afd0081f138b4c5": {
+      "src": "C:\\Users\\user\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin\\kotlin-stdlib-js\\1.5.31\\e735bb7789c907d1fec0d2dfbb11b046198822c7\\kotlin-stdlib-js-1.5.31.jar",
+      "target": "kotlin\\1.5.31"
+    },
+    "337ff817e087aded273dfc9ba494baf4": {
+      "src": "C:\\Users\\user\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin\\kotlin-test-js-runner\\1.5.31\\20ef83e15f8c2cde090f3bfd8c1eba72947f7ab8\\kotlin-test-js-runner-1.5.31.jar",
+      "target": "kotlin-test-js-runner\\1.5.31"
+    },
+    "d48c49450e9eb3b3c0cc6040ca564f91": {
+      "src": "C:\\Users\\user\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin\\kotlin-test-js\\1.5.31\\2c5105ba30e3396c0a5d112ad75a7076f5409a62\\kotlin-test-js-1.5.31.jar",
+      "target": "kotlin-test\\1.5.31"
+    }
+  }
+}

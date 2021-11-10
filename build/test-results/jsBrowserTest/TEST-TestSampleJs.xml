@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestSampleJs" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-10T15:26:35" hostname="DIESERPC" time="0.095">
+  <properties/>
+  <testcase name="runFibTest[js, browser, ChromeHeadless95.0.4638.69, Windows10]" classname="TestSampleJs" time="0.095"/>
+  <system-out><![CDATA[[log] Fibonacci Sequence
+[log] 0
+[log] 1
+[log] 1
+[log] 2
+[log] 3
+[log] 5
+[log] 8
+[log] 13
+[log] 21
+[log] 34
+[log] 55
+[log] 89
+[log] 144
+[log] 233
+[log] 377
+[log] 610
+[log] 987
+[log] 1597
+[log] 2584
+[log] 4181
+[log] 6765
+[log] 10946
+[log] 17711
+[log] 28657
+[log] 46368
+[log] 75025
+[log] 121393
+[log] 196418
+[log] 317811
+[log] 514229
+[log] result: kotlin.Unit
+[log] Duration ist 2 ms
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
