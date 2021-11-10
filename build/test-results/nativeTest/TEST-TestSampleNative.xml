@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSampleNative" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-10T15:10:05" hostname="DIESERPC" time="0.019">
+<testsuite name="TestSampleNative" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-11-10T23:04:28" hostname="DIESERPC" time="0.01">
   <properties/>
-  <testcase name="runFibTest[native]" classname="TestSampleNative" time="0.019"/>
+  <testcase name="runFibTest[native]" classname="TestSampleNative" time="0.009"/>
+  <testcase name="testHello[native]" classname="TestSampleNative" time="0.0"/>
   <system-out><![CDATA[Fibonacci Sequence
 0
 1
@@ -34,7 +35,7 @@
 317811
 514229
 result: kotlin.Unit
-Duration ist 0 ms
+Generated in 0 ms
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

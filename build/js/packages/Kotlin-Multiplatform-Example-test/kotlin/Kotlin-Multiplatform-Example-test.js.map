@@ -1,1 +1,1 @@
-{"version":3,"file":"Kotlin-Multiplatform-Example-test.js","sources":["../../../../../src/jsTest/kotlin/TestSampleJs.kt"],"sourcesContent":[null],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;EAEA,wB;G;sCAEI,Y;IAEmB,CAAf,kBAAe,U;EACnB,C;;;;;;;;;;;;;;;;;"}
+{"version":3,"file":"Kotlin-Multiplatform-Example-test.js","sources":["../../../../../src/jsTest/kotlin/TestSampleJs.kt"],"sourcesContent":[null],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;EAGA,wB;G;sCAEI,Y;IAEmB,CAAf,kBAAe,U;EACnB,C;qCAEA,Y;IAEI,WAAW,SAAQ,UAAR,OAAX,C;EACJ,C;;;;;;;;;;;;;;;;;;;;"}

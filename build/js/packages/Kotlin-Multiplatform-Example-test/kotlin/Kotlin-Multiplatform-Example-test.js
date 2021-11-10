@@ -15,6 +15,9 @@
 }(this, function (_, Kotlin, $module$Kotlin_Multiplatform_Example, $module$kotlin_test) {
   'use strict';
   var CommonSample = $module$Kotlin_Multiplatform_Example.CommonSample;
+  var platform = $module$Kotlin_Multiplatform_Example.platform;
+  var contains = Kotlin.kotlin.text.contains_li3zpu$;
+  var assertTrue = $module$kotlin_test.kotlin.test.assertTrue_ifx8ge$;
   var Kind_CLASS = Kotlin.Kind.CLASS;
   var test = $module$kotlin_test.kotlin.test.test;
   var suite = $module$kotlin_test.kotlin.test.suite;
@@ -22,6 +25,9 @@
   }
   TestSampleJs.prototype.runFibTest = function () {
     (new CommonSample()).runFib();
+  };
+  TestSampleJs.prototype.testHello = function () {
+    assertTrue(contains(platform(), 'JS'));
   };
   TestSampleJs.$metadata$ = {
     kind: Kind_CLASS,
@@ -33,6 +39,9 @@
     suite('TestSampleJs', false, function () {
       test('runFibTest', false, function () {
         return (new TestSampleJs()).runFibTest();
+      });
+      test('testHello', false, function () {
+        return (new TestSampleJs()).testHello();
       });
     });
   });

@@ -19,11 +19,12 @@
   var COROUTINE_SUSPENDED = Kotlin.kotlin.coroutines.intrinsics.COROUTINE_SUSPENDED;
   var CoroutineImpl = Kotlin.kotlin.coroutines.CoroutineImpl;
   var sequence = Kotlin.kotlin.sequences.sequence_o0x0bg$;
+  var Kind_OBJECT = Kotlin.Kind.OBJECT;
   function CommonSample() {
   }
   function CommonSample$runFib$lambda() {
     var tmp$;
-    tmp$ = take((new Iteration()).fibonacci(), 30).iterator();
+    tmp$ = take((new FibSeqGen()).fibonacci(), 30).iterator();
     while (tmp$.hasNext()) {
       var element = tmp$.next();
       println(element);
@@ -45,42 +46,45 @@
     measure();
     var end = getCurrentTimeInMillis();
     var duration = end.subtract(start);
-    println('Duration ist ' + duration.toString() + ' ms');
+    println('Generated in ' + duration.toString() + ' ms');
   }
-  function Iteration() {
+  function platform() {
+    return 'Hello from JS';
   }
-  function Coroutine$Iteration$fibonacci$lambda($receiver_0, controller, continuation_0) {
+  function FibSeqGen() {
+  }
+  function Coroutine$FibSeqGen$fibonacci$lambda($receiver_0, controller, continuation_0) {
     CoroutineImpl.call(this, continuation_0);
     this.$controller = controller;
     this.exceptionState_0 = 1;
-    this.local$terms = void 0;
+    this.local$fib = void 0;
     this.local$$receiver = $receiver_0;
   }
-  Coroutine$Iteration$fibonacci$lambda.$metadata$ = {
+  Coroutine$FibSeqGen$fibonacci$lambda.$metadata$ = {
     kind: Kotlin.Kind.CLASS,
     simpleName: null,
     interfaces: [CoroutineImpl]
   };
-  Coroutine$Iteration$fibonacci$lambda.prototype = Object.create(CoroutineImpl.prototype);
-  Coroutine$Iteration$fibonacci$lambda.prototype.constructor = Coroutine$Iteration$fibonacci$lambda;
-  Coroutine$Iteration$fibonacci$lambda.prototype.doResume = function () {
+  Coroutine$FibSeqGen$fibonacci$lambda.prototype = Object.create(CoroutineImpl.prototype);
+  Coroutine$FibSeqGen$fibonacci$lambda.prototype.constructor = Coroutine$FibSeqGen$fibonacci$lambda;
+  Coroutine$FibSeqGen$fibonacci$lambda.prototype.doResume = function () {
     do
       try {
         switch (this.state_0) {
           case 0:
-            this.local$terms = new Pair(0, 1);
+            this.local$fib = new Pair(0, 1);
             this.state_0 = 2;
             continue;
           case 1:
             throw this.exception_0;
           case 2:
             this.state_0 = 3;
-            this.result_0 = this.local$$receiver.yield_11rb$(this.local$terms.first, this);
+            this.result_0 = this.local$$receiver.yield_11rb$(this.local$fib.first, this);
             if (this.result_0 === COROUTINE_SUSPENDED)
               return COROUTINE_SUSPENDED;
             continue;
           case 3:
-            this.local$terms = new Pair(this.local$terms.second, this.local$terms.first + this.local$terms.second | 0);
+            this.local$fib = new Pair(this.local$fib.second, this.local$fib.first + this.local$fib.second | 0);
             this.state_0 = 2;
             continue;
           default:this.state_0 = 1;
@@ -97,30 +101,49 @@
       }
      while (true);
   };
-  function Iteration$fibonacci$lambda($receiver_0, continuation_0, suspended) {
-    var instance = new Coroutine$Iteration$fibonacci$lambda($receiver_0, this, continuation_0);
+  function FibSeqGen$fibonacci$lambda($receiver_0, continuation_0, suspended) {
+    var instance = new Coroutine$FibSeqGen$fibonacci$lambda($receiver_0, this, continuation_0);
     if (suspended)
       return instance;
     else
       return instance.doResume(null);
   }
-  Iteration.prototype.fibonacci = function () {
-    return sequence(Iteration$fibonacci$lambda);
+  FibSeqGen.prototype.fibonacci = function () {
+    return sequence(FibSeqGen$fibonacci$lambda);
   };
-  Iteration.$metadata$ = {
+  FibSeqGen.$metadata$ = {
     kind: Kind_CLASS,
-    simpleName: 'Iteration',
+    simpleName: 'FibSeqGen',
     interfaces: []
   };
   function getCurrentTimeInMillis() {
     return Kotlin.Long.fromNumber(Date.now());
   }
+  function Platform() {
+    Platform_instance = this;
+    this.name = 'JS';
+  }
+  Platform.$metadata$ = {
+    kind: Kind_OBJECT,
+    simpleName: 'Platform',
+    interfaces: []
+  };
+  var Platform_instance = null;
+  function Platform_getInstance() {
+    if (Platform_instance === null) {
+      new Platform();
+    }return Platform_instance;
+  }
   function main() {
     (new CommonSample()).runFib();
   }
   _.CommonSample = CommonSample;
-  _.Iteration = Iteration;
+  _.platform = platform;
+  _.FibSeqGen = FibSeqGen;
   _.getCurrentTimeInMillis = getCurrentTimeInMillis;
+  Object.defineProperty(_, 'Platform', {
+    get: Platform_getInstance
+  });
   _.main = main;
   main();
   Kotlin.defineModule('Kotlin-Multiplatform-Example', _);

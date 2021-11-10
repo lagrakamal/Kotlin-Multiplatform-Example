@@ -8,6 +8,7 @@ class CommonSample {
             })
         }
     }
+
 }
 
 private fun measureTime(measure: () -> Any) {
@@ -19,3 +20,10 @@ private fun measureTime(measure: () -> Any) {
 }
 
 expect fun getCurrentTimeInMillis(): Long
+
+expect object Platform {
+    val name: String
+}
+
+fun platform(): String = "Hello from ${Platform.name}"
+
